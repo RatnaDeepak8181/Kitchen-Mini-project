@@ -1,5 +1,5 @@
 import {Component} from 'react'
-// import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './index.css'
 
@@ -86,6 +86,10 @@ class Login extends Component {
 
   render() {
     const {showSubmitError, errorMsg} = this.state
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
     return (
       <>
         <div className="login-container">
@@ -97,12 +101,20 @@ class Login extends Component {
               <img
                 src="https://res.cloudinary.com/dihuk5job/image/upload/v1699851808/nd3bzcd9zhxncbgkkurt.jpg"
                 alt="website login"
-                className="login-page-landing-img"
+                className="login-page-landing-sm-img"
               />
             </div>
           </div>
           <div className="login-form-bottom-container">
             <form onSubmit={this.submitForm} className="login-form-container">
+              <div className="form-logo-heading-container">
+                <img
+                  src="https://res.cloudinary.com/dihuk5job/image/upload/v1700032061/r43zorhd8iax0ezor388.svg"
+                  alt="website logo"
+                />
+                <h1 className="form-heading">Tasty Kitchens</h1>
+                <h1 className="login">Login</h1>
+              </div>
               {this.renderUsernameField()}
               {this.renderPasswordField()}
               {showSubmitError && <p className="error-msg">{errorMsg}</p>}
@@ -112,6 +124,11 @@ class Login extends Component {
                 </button>
               </div>
             </form>
+            <img
+              src="https://res.cloudinary.com/dihuk5job/image/upload/v1700738334/j5g3b9etu4k3psqgqnmg.jpg"
+              alt="website login"
+              className="lg-landing-img"
+            />
           </div>
         </div>
       </>

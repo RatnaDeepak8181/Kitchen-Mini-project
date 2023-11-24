@@ -1,0 +1,203 @@
+.restaurant-banner-and-details-container {
+  display: flex;
+  align-items: center;
+  background-color: #333333;
+  padding-bottom: 30px;
+  padding-left: 25px;
+  padding-top: 20px;
+}
+.restaurant-banner-image {
+  width: 181px;
+  height: 181px;
+  top: -54px;
+  left: -68px;
+  border-radius: 133.98px;
+}
+.restaurant-banner-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 12px;
+}
+.restaurant-banner-name {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  margin: 0px;
+}
+.restaurant-banner-cuisine {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0px;
+  margin-top: 10px;
+}
+.restaurant-banner-location {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0px;
+  margin-top: 10px;
+}
+.rating-and-cost-for-two-container {
+  display: flex;
+  margin-top: 10px;
+}
+.banner-rating-container {
+  border: 2px solid #ffffff;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  margin-right: 8px;
+  padding-right: 8px;
+}
+.banner-star-and-rating-container {
+  display: flex;
+  align-items: center;
+}
+.restaurant-banner-rating {
+  font-family: 'DM Sans';
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0px;
+  margin-left: 5px;
+}
+.restaurant-banner-reviews-count {
+  font-family: 'DM Sans';
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0px;
+}
+.restaurant-banner-cost {
+  font-family: 'DM Sans';
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0px;
+}
+.restaurant-banner-cost-for-two {
+  font-family: 'DM Sans';
+  color: #e2e8f0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0px;
+}
+@media screen and (min-width: 902px) {
+  .restaurant-banner-and-details-container {
+    padding-top: 30px;
+    padding-left: 135px;
+    padding-right: 135px;
+  }
+  .restaurant-banner-image {
+    width: 445px;
+    height: 280px;
+    border-radius: 8px;
+  }
+  .restaurant-banner-name {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .restaurant-banner-cuisine {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .restaurant-banner-location {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .restaurant-banner-rating {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .restaurant-banner-reviews-count {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .restaurant-banner-cost {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .restaurant-banner-cost-for-two {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.food-items-container {
+  padding: 26px;
+}
+.food-items-list {
+  list-style-type: none;
+  padding: 0px;
+}
+@media screen and (min-width: 902px) {
+  .food-items-container {
+    padding-left: 135px;
+  }
+  .food-items-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.restaurant-details-failure-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.restaurant-close-img {
+  height: 450px;
+  width: 450px;
+}
+.failure-heading {
+  font-family: 'DM Sans';
+  color: #1e293b;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.failure-desc {
+  font-family: 'DM Sans';
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+@media screen and (min-width: 902px) {
+  .restaurant-close-img {
+    height: 250px;
+    width: 250px;
+  }
+}

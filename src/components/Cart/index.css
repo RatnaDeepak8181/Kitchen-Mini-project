@@ -1,0 +1,211 @@
+.payment-success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 360px;
+  height: 640px;
+  padding: 0px, 0px, 160px, 0px;
+}
+.success-icon {
+  width: 38.4px;
+  height: 38.4px;
+  color: #22c55e;
+}
+.success-heading {
+  font-family: 'DM Sans';
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.success-desc {
+  font-family: 'DM Sans';
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.home-page-button-link {
+  font-family: 'DM Sans';
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #f7931e;
+  padding: 18px, 36px, 18px, 36px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .success-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .success-heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .success-desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .home-page-button-link {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.cart-loader {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.empty-cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 576px;
+}
+.empty-cart-img {
+  width: 203px;
+  height: 175px;
+}
+.empty-cart-heading {
+  font-family: 'DM Sans';
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.empty-cart-desc {
+  font-family: 'DM Sans';
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.order-btn {
+  background-color: #f7931e;
+  padding: 10px 12px 10px 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+.cart-container {
+  margin-right: 135px;
+  margin-left: 135px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #f9fbfe;
+}
+.cart-heading-container {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .cart-heading-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .cart-heading-container {
+    display: none;
+  }
+  .cart-container {
+    background-color: transparent;
+    margin: 0px;
+  }
+}
+.cart-heading {
+  font-family: 'DM Sans';
+  color: #475569;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  width: 68%;
+}
+.cart-heading-price {
+  font-family: 'DM Sans';
+  color: #475569;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  margin-right: 30px;
+}
+.cart-items-list {
+  padding: 0px;
+}
+@media screen and (max-width: 768px) {
+  .cart-items-list {
+    padding-left: 25px;
+  }
+}
+
+.order-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .order-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .cart-hr-line {
+    border-style: groove;
+    border: 2px dashed #cbd2d9;
+    width: 90%;
+  }
+}
+.order-style {
+  font-family: 'Roboto';
+  color: #3e4c59;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.order-style-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.order-style {
+  font-family: 'DM Sans';
+  color: #3e4c59;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+.order-icon {
+  font-family: 'DM Sans';
+  color: #3e4c59;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: right;
+}
