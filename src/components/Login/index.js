@@ -19,7 +19,7 @@ class Login extends Component {
     this.setState({password: event.target.value})
   }
 
-  submitForm = async event => {
+  onSubmitForm = async event => {
     event.preventDefault()
     const {username, password} = this.state
     const userDetails = {username, password}
@@ -48,91 +48,68 @@ class Login extends Component {
     this.setState({showSubmitError: true, errorMsg})
   }
 
-  renderPasswordField = () => {
-    const {password} = this.state
-    return (
-      <div className="password-input-and-label-container">
-        <label className="password-input-label" htmlFor="password">
-          PASSWORD
-        </label>
-        <input
-          type="password"
-          className="password-input-field"
-          id="password"
-          onChange={this.onChangePassword}
-          value={password}
-        />
-      </div>
-    )
-  }
-
-  renderUsernameField = () => {
-    const {username} = this.state
-    return (
-      <div className="username-input-and-label-container">
-        <label className="username-input-label" htmlFor="username">
-          USERNAME
-        </label>
-        <input
-          type="text"
-          className="username-input-field"
-          id="username"
-          onChange={this.onChangeUsername}
-          value={username}
-        />
-      </div>
-    )
-  }
-
   render() {
-    const {showSubmitError, errorMsg} = this.state
+    const {username, password, showSubmitError, errorMsg} = this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
     }
     return (
-      <>
-        <div className="login-container">
-          <div className="heading-and-img-container">
-            <div className="login-heading-container">
-              <h1 className="login-container-heading">Login</h1>
-            </div>
-            <div className="img-container">
-              <img
-                src="https://res.cloudinary.com/dihuk5job/image/upload/v1699851808/nd3bzcd9zhxncbgkkurt.jpg"
-                alt="website login"
-                className="login-page-landing-sm-img"
-              />
-            </div>
-          </div>
-          <div className="login-form-bottom-container">
-            <form onSubmit={this.submitForm} className="login-form-container">
-              <div className="form-logo-heading-container">
-                <img
-                  src="https://res.cloudinary.com/dihuk5job/image/upload/v1700032061/r43zorhd8iax0ezor388.svg"
-                  alt="website logo"
-                />
-                <h1 className="form-heading">Tasty Kitchens</h1>
-                <h1 className="login">Login</h1>
-              </div>
-              {this.renderUsernameField()}
-              {this.renderPasswordField()}
-              {showSubmitError && <p className="error-msg">{errorMsg}</p>}
-              <div className="login-btn-container">
-                <button className="submit-btn" type="submit">
-                  Login
-                </button>
-              </div>
-            </form>
+      <div className="login-bg-container">
+        <div className="login-card">
+          <div className="logo-container">
             <img
-              src="https://res.cloudinary.com/dihuk5job/image/upload/v1700738334/j5g3b9etu4k3psqgqnmg.jpg"
-              alt="website login"
-              className="lg-landing-img"
+              src="https://res.cloudinary.com/dpjowvn70/image/upload/v1673347763/Vector1x_yu8nat.png"
+              alt="website logo"
+              className="website-logo"
+            />
+            <h1 className="company-heading">Tasty Kitchens</h1>
+          </div>
+          <div className="login-title-container">
+            <h1 className="login-heading">Login</h1>
+            <img
+              src="https://res.cloudinary.com/dpjowvn70/image/upload/v1673372046/Rectangle_14571_qeoiah.png"
+              alt="website log"
+              className="small-landing-img"
             />
           </div>
+          <form className="form-container" onSubmit={this.onSubmitForm}>
+            <label htmlFor="username" className="label">
+              USERNAME
+            </label>
+            <input
+              id="username"
+              type="text"
+              className="input"
+              onChange={this.onChangeUsername}
+              value={username}
+            />
+            <label htmlFor="password" className="label">
+              PASSWORD
+            </label>
+            <input
+              id="password"
+              type="password"
+              className="input"
+              onChange={this.onChangePassword}
+              value={password}
+            />
+            {showSubmitError ? <p className="error-msg">{errorMsg}</p> : ''}
+            <button type="submit" className="login-btn">
+              Login
+            </button>
+          </form>
         </div>
-      </>
+        <div className="login-large-view">
+          <img
+            src="https://res.cloudinary.com/dpjowvn70/image/upload/v1673347766/Rectangle_1456_maa67m.png"
+            alt="website login"
+            className="large-landing-img"
+          />
+        </div>
+      </div>
     )
   }
 }
+
 export default Login

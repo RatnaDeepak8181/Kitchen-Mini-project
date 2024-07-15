@@ -47,10 +47,10 @@
 .popup-ele-container {
   background-color: #ffffff;
   height: 128px;
-  width: 355px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 8px;
 }
 .nav-ele-container {
   list-style-type: none;

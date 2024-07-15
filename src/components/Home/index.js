@@ -271,10 +271,10 @@ class Home extends Component {
     const {activeOptionId, paginationStatus} = this.state
     // console.log(activePage)
     return (
-      <>
+      <div className="whole-home-container">
         <Header />
+        {this.renderCarouselApiStatus()}
         <div className="home-container">
-          {this.renderCarouselApiStatus()}
           <div className="home-middle-container">
             <h1 className="popular-restaurants-heading">Popular Restaurants</h1>
             <div className="desc-and-sort-container">
@@ -306,10 +306,10 @@ class Home extends Component {
             ) : (
               ''
             )}
-            <Footer />
           </div>
+          <Footer />
         </div>
-      </>
+      </div>
     )
   }
 }
